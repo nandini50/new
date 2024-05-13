@@ -1,6 +1,6 @@
 import React from "react";
  
-import { AreaChart, LineChart, PieChart } from "nr1";
+import { AreaChart, LineChart, PieChart ,BarChart} from "nr1";
  
 import { Grid, GridItem } from "nr1";
  
@@ -40,7 +40,17 @@ const index = () => {
           query="SELECT average(loadAverageOneMinute) AS `1 minute`, average(loadAverageFiveMinute) AS `5 minutes`, average(loadAverageFifteenMinute) AS `15 minutes` FROM SystemSample WHERE (entityGuid = 'NDQ0MDAyNXxJTkZSQXxOQXw3NDQwNDk3OTEyNzYyMDI2Mjk2') TIMESERIES AUTO"
           fullWidth
           />
-</GridItem></Grid>
+</GridItem>
+<GridItem columnSpan={6}>
+<BarChart
+          accountId={4440025
+            
+          }
+          query="SELECT average(loadAverageOneMinute) AS `1 minute`, average(loadAverageFiveMinute) AS `5 minutes`, average(loadAverageFifteenMinute) AS `15 minutes` FROM SystemSample WHERE (entityGuid = 'NDQ0MDAyNXxJTkZSQXxOQXw3NDQwNDk3OTEyNzYyMDI2Mjk2') TIMESERIES AUTO"
+          fullWidth
+          />
+</GridItem>
+</Grid>
  
  
  
